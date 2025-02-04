@@ -5,15 +5,12 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import com.google.gson.Gson;
-
 import Cidade.CidadeDoPokemon;
 import Pokemon.Pokemon;
 import Pokemon.PokemonRecord;
 
 public class App {
     public static void main(String[] args) throws RuntimeException, IOException, InterruptedException {
-        
-        Pokemon poke = new Pokemon();
 
         String pokemon = "bulbasaur";
         String pokeApi = "https://pokeapi.co/api/v2/pokemon/" + pokemon + "/"; // Corrigi a URL
