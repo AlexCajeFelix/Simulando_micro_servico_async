@@ -30,6 +30,7 @@ public void createRequestPokemon (String nomePokemon) throws IOException{
         Gson gson = new Gson();
         PokemonRecord poke2 = gson.fromJson(responseBody, PokemonRecord.class);
         Pokemon teste = new Pokemon(poke2);
+        
         System.out.println(teste);
        } catch (IOException e) {
             throw new ExeptionPokemon("Deu ruim IOException");
