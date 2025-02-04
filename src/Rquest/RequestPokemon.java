@@ -16,7 +16,7 @@ import Pokemon.PokemonRecord;
 public class RequestPokemon {
 
 
-public void createRequestPokemon (String nomePokemon) {
+public void createRequestPokemon (String nomePokemon) throws IOException{
        try {
         String pokemon = nomePokemon;
         String pokeApi = "https://pokeapi.co/api/v2/pokemon/" + pokemon + "/"; // Corrigi a URL

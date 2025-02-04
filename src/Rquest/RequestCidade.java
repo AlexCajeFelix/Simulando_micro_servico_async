@@ -14,7 +14,7 @@ import Exeption.ExeptionCidade;
 
 public class RequestCidade {
 
-    public void RequestCidade(String cidade) {
+    public void RequestCidade(String cidade) throws InterruptedException{
         try {
             Gson gson = new Gson();
             String cep = cidade;
