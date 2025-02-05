@@ -16,7 +16,7 @@ import Pokemon.PokemonRecord;
 public class RequestPokemon {
 
 
-public void createRequestPokemon (String nomePokemon) throws IOException{
+public Pokemon createRequestPokemon (String nomePokemon) throws IOException{
        try {
         String pokemon = nomePokemon;
         String pokeApi = "https://pokeapi.co/api/v2/pokemon/" + pokemon + "/"; // Corrigi a URL
@@ -30,13 +30,17 @@ public void createRequestPokemon (String nomePokemon) throws IOException{
         Gson gson = new Gson();
         PokemonRecord poke2 = gson.fromJson(responseBody, PokemonRecord.class);
         Pokemon teste = new Pokemon(poke2);
-        
         System.out.println(teste);
+
+        return teste;
        } catch (IOException e) {
             throw new ExeptionPokemon("Deu ruim IOException");
        }catch(InterruptedException e){
         throw new ExeptionPokemon("Deu ruim InterruptedException");
        }
     }
+
+   
+    
     
 }

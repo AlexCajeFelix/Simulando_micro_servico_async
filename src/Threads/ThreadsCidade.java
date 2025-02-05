@@ -17,6 +17,7 @@ public class ThreadsCidade implements Runnable {
 
         try {
             requestCidade.requestCidade(cep);
+            
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (JsonSyntaxException e) {
@@ -27,7 +28,7 @@ public class ThreadsCidade implements Runnable {
         } catch (RuntimeException e) {
             System.out.println("Erro: DEU RUNTIMEEXCEPTION");
         }
-        System.out.println(Thread.currentThread().getName() + "tdrCidade");
+     /*    System.out.println(Thread.currentThread().getName() + "tdrCidade"); */
     }
 
 }

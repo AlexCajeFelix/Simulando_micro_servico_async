@@ -14,7 +14,7 @@ import Exeption.ExeptionCidade;
 
 public class RequestCidade {
 
-    public void requestCidade(String cidade) throws InterruptedException{
+    public CidadeDoPokemon requestCidade(String cidade) throws InterruptedException{
         try {
             Gson gson = new Gson();
             String cep = cidade;
@@ -30,8 +30,9 @@ public class RequestCidade {
             HttpResponse<String> response = client.send(request2, BodyHandlers.ofString());
             String responseBody2 = response.body();
 
+           
             CidadeDoPokemon cidadeObjeto = gson.fromJson(responseBody2, CidadeDoPokemon.class);
-            System.out.println(cidadeObjeto);
+            return cidadeObjeto;
 
         } catch (InterruptedException e) {
             throw new ExeptionCidade("Deu ruim InterruptedException");

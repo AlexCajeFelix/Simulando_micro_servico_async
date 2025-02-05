@@ -24,8 +24,7 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        return "Pokemon [name=" + name + ", getName()=" + getName() + ", getClass()=" + getClass() + ", hashCode()="
-                + hashCode() + ", toString()=" + super.toString() + "]";
+        return "O nome do pokemon é " + getName();
     }
 
 

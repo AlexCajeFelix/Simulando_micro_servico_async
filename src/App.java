@@ -1,6 +1,8 @@
 import java.io.IOException;
 import java.util.Scanner;
 import com.google.gson.JsonSyntaxException;
+
+import CompletableFutureMethod.CompletableFutureMethod;
 import Threads.ThreadsCidade;
 import Threads.ThreadsPokemon;
 
@@ -9,23 +11,12 @@ public class App {
         try {
             Scanner sc = new Scanner(System.in);
 
-            System.out.println("Digite o nome do pokemon");
-            String name = sc.nextLine();
-            System.out.println("Digite o cep da cidade");
-            String cep = sc.nextLine();
+        
 
-            ThreadsPokemon trh = new ThreadsPokemon();
-            trh.setName(name);
-            Thread thread = new Thread(trh);
-            thread.start();
-            thread.join();
+            CompletableFutureMethod metodTest = new CompletableFutureMethod();
+            metodTest.run();
 
-            ThreadsCidade trhCidade = new ThreadsCidade();
-            trhCidade.setCep(cep);
-            Thread thread2 = new Thread(trhCidade);
-            thread2.start();
-            thread2.join();
-
+    
             System.out.println("CONDICIONAL AQUI DPS QUE TODAS API DEVOLVEREM O VALOR ");
 
             sc.close();

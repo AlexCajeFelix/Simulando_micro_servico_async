@@ -32,6 +32,6 @@ public class ThreadsPokemon implements Runnable {
             System.out.println("Erro: DEU RUNTIMEEXCEPTION");
         }
 
-        System.out.println(Thread.currentThread().getName() + "tdrPokemon");
+        /* System.out.println(Thread.currentThread().getName() + "tdrPokemon"); */
     }
 }
