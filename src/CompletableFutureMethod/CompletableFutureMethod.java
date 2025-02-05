@@ -11,7 +11,7 @@ import Rquest.RequestPokemon;
 public class CompletableFutureMethod {
     
 
-    private String cep;
+ 
     
 
     public void run() throws IOException {
@@ -63,7 +63,5 @@ public class CompletableFutureMethod {
        
     }
 
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
+  
 }
